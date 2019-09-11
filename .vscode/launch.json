@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - locadoraInterface",
+            "request": "launch",
+            "mainClass": "Interface.locadoraInterface",
+            "projectName": "TrabalhoPraticoI_84a54447"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TrabalhoPraticoI",
+            "request": "launch",
+            "mainClass": "Principal.TrabalhoPraticoI",
+            "projectName": "TrabalhoPraticoI_84a54447"
+        }
+    ]
+}
