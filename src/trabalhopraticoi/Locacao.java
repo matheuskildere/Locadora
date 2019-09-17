@@ -1,18 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package trabalhopraticoi;
 
-import java.util.ArrayList;
+import trabalhopraticoi.Cliente;
+import trabalhopraticoi.Veiculo;
 
 /**
- *
- * @author Bruno and Matheus
+ * Locacao
  */
-public class Locacao implements ILocacoes{
-    private ArrayList<Locacao> listLocacoes;
+public class Locacao {
+    public static int numCodigo = 1;
+
     private Cliente locador;
     private Veiculo veiculoLocado;
     private int codigo;
@@ -21,88 +17,54 @@ public class Locacao implements ILocacoes{
     private boolean seguro;
     private float valorDiaria;
     
-    public Locacao(){
-       listLocacoes = new ArrayList<>();
-    }
-    
-    public Locacao (int codigo, Cliente locador, String dataLocacao, Veiculo veiculoLocado, boolean seguro, float valorDiaria){
-        this.codigo = codigo;
+    public Locacao (Cliente locador, String dataLocacao, String dataDevolucao ,Veiculo veiculoLocado, boolean seguro, float valorDiaria){
+        this.codigo = numCodigo;
         this.locador = locador;
         this.dataLocacao = dataLocacao;
+        this.dataDevolucao = dataDevolucao;
         this.veiculoLocado = veiculoLocado;
         this.seguro = seguro;
         this.valorDiaria = valorDiaria;
+        numCodigo++;
+    }
+
+    /**
+     * @return the codigo
+     */
+    public int getCodigo() {
+        return codigo;
+    }
+    /**
+     * @return the dataDevolucao
+     */
+    public String getDataDevolucao() {
+        return dataDevolucao;
+    }
+    /**
+     * @return the dataLocacao
+     */
+    public String getDataLocacao() {
+        return dataLocacao;
+    }
+    /**
+     * @return the locador
+     */
+    public Cliente getLocador() {
+        return locador;
+    }
+    /**
+     * @return the veiculoLocado
+     */
+    public Veiculo getVeiculoLocado() {
+        return veiculoLocado;
     }
 
     @Override
-    public void add(Locacao l) {
-        listLocacoes.add(l);
-    }
-
-    @Override
-    public Locacao get(int codigo) {
-        for (Locacao locacaoCadastrada : listLocacoes) {
-            if (locacaoCadastrada.codigo == codigo) {
-                return locacaoCadastrada;
-            }
-        }
-        return null;
-    }
-
-    @Override
-    public String getInfo(int codigo) {
-        Locacao locacaoCapturada = get(codigo);
-        if (locacaoCapturada != null) {
-            String dados = locacaoCapturada.locador.toString();
-            dados += locacaoCapturada.veiculoLocado.toString();
-            dados += "\nCodigo da Locacao: "+ locacaoCapturada.codigo;
-            dados += "\nData: "+ locacaoCapturada.dataLocacao;
-            dados += "\nPossui seguro: "+ locacaoCapturada.seguro;
-            return dados;
-        }
-        return null;
-    }
-
-    @Override
-    public String getInfo() {
-        String dados= "";
-        for (Locacao locacaoCapturada : listLocacoes) {
-            dados = locacaoCapturada.locador.toString();
-            dados += locacaoCapturada.veiculoLocado.toString();
-            dados += "\nCodigo da Locacao: "+ locacaoCapturada.codigo;
-            dados += "\nData: "+ locacaoCapturada.dataLocacao;
-            dados += "\nPossui seguro: "+ locacaoCapturada.seguro;
-        }
+    public String toString() {
+        String dados = "";
+        dados += "Codigo: "+getCodigo () +"\nData locacao: "+getDataLocacao() +"\nData devolucao: "+getDataDevolucao();
+        dados += " \n" +locador.resumoInfo();
+        dados += " \n" + veiculoLocado.resumoInfo();
         return dados;
     }
-
-    @Override
-    public boolean set(int codigo, Locacao novaLocacao) {
-        Locacao antigaLocacao = get(codigo);
-        if (antigaLocacao != null) {
-            antigaLocacao = novaLocacao;
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public boolean remove(int codigo) {
-        Locacao locacaoRemovida = get(codigo);
-        if (locacaoRemovida != null) {
-            listLocacoes.remove(locacaoRemovida);
-            return true;
-        }   
-        return false;    
-    }
-
-    @Override
-    public boolean existe(int codigo) {
-        if (get(codigo) != null) {
-            return true;
-        }
-        return false;
-    }
-    
-    
 }

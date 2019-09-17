@@ -15,15 +15,18 @@ Número de passageiros, categoria (leito, executivo ou convencional),
 serviço de internet sem fio (sim ou não) e ar-condicionado (sim ou não).
  */
 public class Onibus extends Veiculo{
-
-    public Onibus(String placa, int ano, float valorDiaria) {
-        super(placa, ano, valorDiaria);
-    }
-
     private int numPass;
     private String categoria;
-    private boolean netSFio;
+    private boolean wifi;
     private boolean arCond;
+
+    public Onibus(String placa, int ano, float valorDiaria, int numPass, String categoria, boolean wifi, boolean arCond) {
+        super(placa, ano, valorDiaria);
+        this.numPass = numPass;
+        this.categoria = categoria;
+        this.wifi = wifi;
+        this.arCond = arCond;
+    }
 
     public int getNumPass() {
         return numPass;
@@ -41,12 +44,12 @@ public class Onibus extends Veiculo{
         this.categoria = categoria;
     }
 
-    public boolean isNetSFio() {
-        return netSFio;
+    public boolean isWifi() {
+        return wifi;
     }
 
-    public void setNetSFio(boolean netSFio) {
-        this.netSFio = netSFio;
+    public void setWifi(boolean wifi) {
+        this.wifi = wifi;
     }
 
     public boolean isArCond() {
@@ -57,5 +60,8 @@ public class Onibus extends Veiculo{
         this.arCond = arCond;
     }
     
+    public String toString(){
+        return super.toString() + "\nNúmero Passageiros: " + getNumPass() + "\nCategoria: " + getCategoria() + "\nInternet: " + isWifi() + "\nArcondicionado: " + isArCond();
+    }
     
 }

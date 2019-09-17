@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * Cliente
  * @author Bruno and Matheus
  */
-public class Cliente {
+public abstract class Cliente {
     
     protected String nome;
     protected long cpf;
@@ -19,12 +19,12 @@ public class Cliente {
     protected String endereco;
     protected long telefone;
 
-    public Cliente(String nome, long cpf){
+    public Cliente(String nome, long cpf, long cnh, String endereco, long telefone){
         this.nome = nome;
         this.cpf = cpf;
-        this.cnh = 0;
-        this.endereco = "";
-        this.telefone = 0;
+        this.cnh = cnh;
+        this.endereco = endereco;
+        this.telefone = telefone;
     }
 
     /**
@@ -89,6 +89,10 @@ public class Cliente {
     }
     @Override
     public String toString() {
-        return "Nome: " + getNome();
+        return "Nome: " + getNome() + "\nCPF: " + getCpf() + "\nCNH: " + getCnh() + "\nEndereço: " + getEndereco()+ "\nTelefone: " + getTelefone();
+    }
+    
+    public String resumoInfo() {
+        return "\nNome: " + getNome() + "\nCPF: " + getCpf();
     }
 }

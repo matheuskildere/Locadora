@@ -33,38 +33,27 @@ public class Clientes implements IClientes{
     public String getInfo(long CPF) {
         Cliente cliente = get(CPF);
         if (cliente != null){
-                String dados = "\nNome: "+ cliente.nome;
-                dados += "\nCpf: "+ cliente.cpf;
-                dados += "\nCnh: "+ cliente.cnh;
-                dados += "\nEndereco: "+ cliente.endereco;
-                dados += "\nTelefone: "+ cliente.telefone;
-        
-                return dados;
+                return cliente.toString();
         }
         return null;
     }
 
     @Override
     public String getInfo() {
+        String dados = "";
         for(Cliente clienteCadastrado: listClientes){
-            String dados = "\nNome: "+ clienteCadastrado.getNome();
-            dados += "\nCpf: "+ clienteCadastrado.getCpf();
-            dados += "\nCnh: "+ clienteCadastrado.getCnh();
-            dados += "\nEndereco: "+ clienteCadastrado.getEndereco();
-            dados += "\nTelefone: "+ clienteCadastrado.getTelefone();
-            return dados;
+            dados += clienteCadastrado.toString();
         }
-        return null;  
+        return dados;  
     }
 
     @Override
     public String getResumoInfo() {
+        String dados = "";
         for(Cliente clienteCadastrado: listClientes){
-            String dados = "\nNome: "+ clienteCadastrado.getNome();
-            dados += "\nCpf: "+ clienteCadastrado.getCpf();
-            return dados;
+            dados += clienteCadastrado.resumoInfo();
         }
-        return null;
+        return dados;
     }
 
     @Override

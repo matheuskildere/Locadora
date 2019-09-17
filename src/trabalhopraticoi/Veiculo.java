@@ -18,7 +18,7 @@ seguintes dados: placa, ano e valor da diária. Carro, ônibus e caminhão são 
 que atualmente podem ser locados. Além dos atributos comuns de todos os veículos, cada
 tipo possui um conjunto extra de dados
  */
-public class Veiculo {
+public abstract class Veiculo {
     protected String placa;
     protected int ano;
     protected float valorDiaria;
@@ -53,9 +53,14 @@ public class Veiculo {
         this.valorDiaria = valorDiaria;
     }
     
-    public String toString(){
-        return "\nPlaca: " +placa + "\nvalor: " +valorDiaria;
+     public String resumoInfo() {
+       return "\nPlaca: " + getPlaca() + "\nAno: " + getAno() + "\nValor Diaria: " + getValorDiaria(); 
     }
+
+    @Override
+    public String toString(){
+        return "Placa: " + getPlaca() + "\nAno: "+ getAno() +"\nValor: " +getValorDiaria();
+    }
+
+   
 }
-
-

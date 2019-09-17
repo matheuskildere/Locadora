@@ -10,6 +10,7 @@ import java.util.Scanner;
 import trabalhopraticoi.Cliente;
 import trabalhopraticoi.Clientes;
 import trabalhopraticoi.Locacao;
+import trabalhopraticoi.Locacoes;
 import trabalhopraticoi.Veiculo;
 import trabalhopraticoi.Veiculos;
 
@@ -23,7 +24,7 @@ public class TrabalhoPraticoI {
     
     private static Scanner entrada = new Scanner (System.in);
 
-    private static Locacao locacao = new Locacao();
+    private static Locacoes locacao = new Locacoes();
     private static Veiculos veiculo;
     private static Clientes cliente;
 
@@ -67,8 +68,8 @@ public class TrabalhoPraticoI {
         System.out.printf("\nValor diaria: ");
         float valorDiaria = entrada.nextFloat();
         entrada.nextLine();
-        Veiculo veiculoNovo = new Veiculo(placa, ano, valorDiaria);
-        veiculo.add(veiculoNovo);
+        //Veiculo veiculoNovo = new Veiculo(placa, ano, valorDiaria);
+        //veiculo.add(veiculoNovo);
         System.out.printf("\nNome cliente: ");
         String nome = entrada.nextLine();
         System.out.printf("\nCpf: ");
@@ -80,10 +81,10 @@ public class TrabalhoPraticoI {
         String endereco= entrada.nextLine();
         System.out.printf("\nTelefone: ");
         long telefone = entrada.nextLong();
-        Cliente clienteNovo = new Cliente(nome, cpf);
-        cliente.add(clienteNovo);
-        Locacao locacaoNova = new Locacao(213, clienteNovo, "28/09", veiculoNovo, true, valorDiaria); 
-        locacao.add(locacaoNova);
+        // clienteNovo = new Cliente(nome, cpf);
+        //cliente.add(clienteNovo);
+        //Locacao locacaoNova = new Locacao(213, clienteNovo, "28/09", veiculoNovo, true, valorDiaria); 
+        //locacao.add(locacaoNova);
     }
 
 

@@ -21,8 +21,12 @@ public class Carro extends Veiculo{
     private float medKmLt;
     private boolean arCond;
 
-    public Carro(String placa, int ano, float valorDiaria) {
+    public Carro(String placa, int ano, float valorDiaria, int numPass, int numPort, float medKmLt, boolean arCond) {
         super(placa, ano, valorDiaria);
+        this.numPass = numPass;
+        this.numPort = numPort;
+        this.medKmLt = medKmLt;
+        this.arCond = arCond;
     }
 
     public int getNumPass() {
@@ -57,5 +61,8 @@ public class Carro extends Veiculo{
         this.arCond = arCond;
     }
     
-    
+    @Override
+    public String toString() {
+        return super.toString() + "\nNúmero de Passageiros: " + getNumPass() + "\nNúmero de Portas: " + getNumPort() + "\nMédia Km por Litro: " + getMedKmLt() + "\nArcondicionado: " + isArCond() ;
+    }
 }

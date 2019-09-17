@@ -16,10 +16,10 @@ public class Caminhao extends Veiculo{
     private int numEixo;
     private float cargMax;
 
-    public Caminhao(String placa, int ano, float valorDiaria) {
+    public Caminhao(String placa, int ano, float valorDiaria,int numEixo, float cargMax) {
         super(placa, ano, valorDiaria);
-        numEixo = 0;
-        cargMax = 0;
+        this.numEixo = numEixo;
+        this.cargMax = cargMax;
     }
 
     /**
@@ -48,8 +48,7 @@ public class Caminhao extends Veiculo{
     }
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
-        return super.toString()  ;
+        return super.toString() + "\nNumero de Eixos: " + getNumEixo() + "\nCarga Maxima: " + getCargMax() ;
     }
     
     
