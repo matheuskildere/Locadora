@@ -33,11 +33,11 @@ public class Menu extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         menuNovaLocacao = new javax.swing.JMenuItem();
         menuBuscaLocacao = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        menuListLocacoes = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         menu_novoCliente = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
+        menuListClientes = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         menuNovoVeiculo = new javax.swing.JMenuItem();
         menuBuscarVeiculo = new javax.swing.JMenuItem();
@@ -98,8 +98,13 @@ public class Menu extends javax.swing.JFrame {
         });
         jMenu2.add(menuBuscaLocacao);
 
-        jMenuItem3.setText("Lista de Locações");
-        jMenu2.add(jMenuItem3);
+        menuListLocacoes.setText("Lista de Locações");
+        menuListLocacoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuListLocacoesActionPerformed(evt);
+            }
+        });
+        jMenu2.add(menuListLocacoes);
 
         jMenuBar1.add(jMenu2);
 
@@ -122,8 +127,13 @@ public class Menu extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem4);
 
-        jMenuItem6.setText("Lista de Clientes");
-        jMenu3.add(jMenuItem6);
+        menuListClientes.setText("Lista de Clientes");
+        menuListClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuListClientesActionPerformed(evt);
+            }
+        });
+        jMenu3.add(menuListClientes);
 
         jMenuBar1.add(jMenu3);
 
@@ -192,7 +202,9 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_menuBuscarVeiculoActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        // TODO add your handling code here:
+        ListaVeiculos listaVeiculo = new ListaVeiculos();
+        JArea.add(listaVeiculo);
+        listaVeiculo.setVisible(true);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void menu_novoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_novoClienteActionPerformed
@@ -218,6 +230,18 @@ public class Menu extends javax.swing.JFrame {
         JArea.add(novaBusca);
         novaBusca.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void menuListLocacoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuListLocacoesActionPerformed
+        ListLocacoes listaLocacoes = new ListLocacoes();
+        JArea.add(listaLocacoes);
+        listaLocacoes.setVisible(true);
+    }//GEN-LAST:event_menuListLocacoesActionPerformed
+
+    private void menuListClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuListClientesActionPerformed
+        ListaClientes listaClientes = new ListaClientes();
+        JArea.add(listaClientes);
+        listaClientes.setVisible(true);
+    }//GEN-LAST:event_menuListClientesActionPerformed
 
     /**
      * @param args the comma|nd line arguments
@@ -261,12 +285,12 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JMenuItem menuBuscaLocacao;
     private javax.swing.JMenuItem menuBuscarVeiculo;
+    private javax.swing.JMenuItem menuListClientes;
+    private javax.swing.JMenuItem menuListLocacoes;
     private javax.swing.JMenuItem menuNovaLocacao;
     private javax.swing.JMenuItem menuNovoVeiculo;
     private javax.swing.JMenuItem menu_novoCliente;

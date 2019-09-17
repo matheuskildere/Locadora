@@ -54,7 +54,7 @@ public abstract class Veiculo {
     }
     
      public String resumoInfo() {
-       return "\nPlaca: " + getPlaca() + "\nAno: " + getAno() + "\nValor Diaria: " + getValorDiaria(); 
+       return "Placa: " + getPlaca() + "\nAno: " + getAno() + "\nValor Diaria: " + getValorDiaria(); 
     }
 
     @Override

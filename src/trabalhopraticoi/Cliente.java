@@ -93,6 +93,6 @@ public abstract class Cliente {
     }
     
     public String resumoInfo() {
-        return "\nNome: " + getNome() + "\nCPF: " + getCpf();
+        return "Nome: " + getNome() + "\nCPF: " + getCpf();
     }
 }

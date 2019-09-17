@@ -37,6 +37,7 @@ public class BuscarLocacao extends javax.swing.JInternalFrame {
         jLabel2 = new javax.swing.JLabel();
         txt_cod = new javax.swing.JTextField();
         Buscar = new javax.swing.JButton();
+        btn_editar = new javax.swing.JButton();
 
         setClosable(true);
 
@@ -63,6 +64,8 @@ public class BuscarLocacao extends javax.swing.JInternalFrame {
             }
         });
 
+        btn_editar.setText("Editar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -71,6 +74,10 @@ public class BuscarLocacao extends javax.swing.JInternalFrame {
                 .addGap(101, 101, 101)
                 .addComponent(jLabel1)
                 .addContainerGap(131, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_editar)
+                .addGap(28, 28, 28))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(17, 17, 17)
@@ -89,7 +96,9 @@ public class BuscarLocacao extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addContainerGap(274, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
+                .addComponent(btn_editar)
+                .addGap(92, 92, 92))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(79, 79, 79)
@@ -116,6 +125,7 @@ public class BuscarLocacao extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Buscar;
+    private javax.swing.JButton btn_editar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;

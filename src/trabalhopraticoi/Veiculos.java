@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author Bruno and Matheus
  */
 public class Veiculos implements IVeiculos {
-    private ArrayList<Veiculo> listVeiculos;
+    public ArrayList<Veiculo> listVeiculos;
 
     public Veiculos(){
         listVeiculos = new ArrayList<>();

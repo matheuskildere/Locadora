@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author Bruno and Matheus
  */
 public class Clientes implements IClientes{
-    private ArrayList<Cliente> listClientes;
+    public ArrayList<Cliente> listClientes;
     
     public Clientes(){
         listClientes  = new ArrayList<>();

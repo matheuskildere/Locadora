@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author Bruno and Matheus
  */
 public class Locacoes implements ILocacoes{
-    private ArrayList<Locacao> listLocacoes;
+    public ArrayList<Locacao> listLocacoes;
     
     public Locacoes(){
        listLocacoes = new ArrayList<>();
