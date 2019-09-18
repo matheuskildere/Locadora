@@ -227,7 +227,7 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     /**
-     * 
+     * Pega os dados necessarios da interface grafica, e instancia uma nova locacao.
      */
     private void salvaLocacao(){
         String cpf = txt_cpf.getText();
@@ -251,8 +251,13 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
         check_seguro.setSelected(false);
         codLoca.setText(""+Locacao.numCodigo);
     }
-    private void btn_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvarActionPerformed
-        // TODO add your handling code here:
+    
+    /**
+     * Dispara um evento ao clicar no botão salvar. Este invoca o metodo salvaLocacao e apos
+     * retorna uma mensagem de sucesso ou de falha.
+     * @param evt
+     */
+    private void btn_salvarActionPerformed(java.awt.event.ActionEvent evt) {
         try {
            salvaLocacao();
            JOptionPane.showMessageDialog(null,"LOCAÇÃO REALIZADA COM SUCESSO\n");
@@ -260,13 +265,24 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"Digite as informações corretamente!");
         }            
-    }//GEN-LAST:event_btn_salvarActionPerformed
+    }
 
-    private void codLocaAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_codLocaAncestorAdded
+    /**
+     * Busca na classe locacao o numero da locacao atual, e mostra ele na interface de cadastro
+     * de locacoes, fazendo com que não seja necessario atribuir um cod de locacao e ao mesmo tempo 
+     * o usuario esteja ciente qual seja.
+     * @param evt
+     */
+    private void codLocaAncestorAdded(javax.swing.event.AncestorEvent evt) {
        codLoca.setText(""+Locacao.numCodigo);
-    }//GEN-LAST:event_codLocaAncestorAdded
+    }
 
-    private void btn_validarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_validarActionPerformed
+    /**
+     * Valida se a placa digitada é existente, caso seja, coloca o valor do veiculo pertencente a placa
+     * no textfild "valorDia".
+     * @param evt
+     */
+    private void btn_validarActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             String valorDiaria =""+ veiculos.get(txt_placa.getText()).getValorDiaria();
             txt_valorDia.setText(valorDiaria);
@@ -274,7 +290,7 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Placa Incorreta");
         }
-    }//GEN-LAST:event_btn_validarActionPerformed
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
