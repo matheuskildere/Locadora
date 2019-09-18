@@ -15,11 +15,11 @@ import trabalhopraticoi.Locacao;
 public class ListLocacoes extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form ListLocacoes
+     * cria um novo form ListLocacoes
      */
     public ListLocacoes() {
         initComponents();
-        areaInfo();
+        areaInfo.setText(locacoes.getInfo()); // Caso haja locacoes, as informacoes das mesmas irao aparecer na area de informacao
     }
 
     /**
@@ -70,13 +70,7 @@ public class ListLocacoes extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    private void areaInfo(){
-        String dados = "";
-        for (Locacao listLocacao : locacoes.listLocacoes) {
-            dados += listLocacao.toString()+"\n\n";
-        }
-        areaInfo.setText(dados);
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea areaInfo;

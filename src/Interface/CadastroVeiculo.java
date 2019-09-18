@@ -286,6 +286,11 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
         setSize(new java.awt.Dimension(636, 413));
     }// </editor-fold>//GEN-END:initComponents
     
+    /**
+     * Instacia um novo veiculo ja com sua definicao de carro, onibus ou caminhao, e retorna o
+     * veiculo instanciado ou caso haja erro, returna null.
+     * @return novoVeiculo ou null
+     */
     private Veiculo salvaVeiculo(){
         int ano = Integer.parseInt(txt_ano.getText());
         float valorDiaria = Float.parseFloat(txt_valorDiaria.getText());
@@ -310,6 +315,11 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
         return null;
     }
     
+    /**
+     * Muda as opcoes de marcar da interface grafica para habilitada ou desabilidade,
+     * dependendo do valor recebido por paramentro. Tal valor, do tipo boolean.
+     * @param valor
+     */
     protected void opsCaminhao(boolean valor){
         if (valor){
             txt_cargMax.setEnabled(true);
@@ -322,6 +332,11 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
         }
     }
     
+    /**
+     * Muda as opcoes de marcar da interface grafica para habilitada ou desabilidade,
+     * dependendo do valor recebido por paramentro. Tal valor, do tipo boolean.
+     * @param valor
+     */
     protected void opsOnibus(boolean valor){
         if(valor){
             check_onibus.setEnabled(true);
@@ -338,6 +353,11 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
         }
     }
     
+    /**
+     * Muda as opcoes de marcar da interface grafica para habilitada ou desabilidade,
+     * dependendo do valor recebido por paramentro. Tal valor, do tipo boolean.
+     * @param valor
+     */
     protected void opsCarro(boolean valor){
         if(valor){
             txt_numPass.setEnabled(true);
@@ -354,6 +374,9 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
         }
     }
     
+    /**
+     * Reseta todos os campos editaveis da interface grafica.
+     */
     private void resetaValores(){
         txt_placa.setText("");
         txt_ano.setText("");
@@ -368,7 +391,12 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
         check_wifi.setSelected(false);
     }
     
-    private void check_carroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_carroActionPerformed
+    /**
+     * Caso a opcao de marcar "carro" for true, desabilita todos os campos que editaveis
+     * que tenham relacoes com onibus e caminhao. 
+     * @param evt
+     */
+    private void check_carroActionPerformed(java.awt.event.ActionEvent evt) {
         if(check_carro.isSelected()){
             opsOnibus(false);
             opsCaminhao(false);
@@ -378,9 +406,14 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
             opsOnibus(true);
             opsCaminhao(true);
         }
-    }//GEN-LAST:event_check_carroActionPerformed
+    }
 
-    private void check_caminhaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_caminhaoActionPerformed
+    /**
+     * Caso a opcao de marcar "caminhao" for true, desabilita todos os campos que editaveis
+     * que tenham relacoes com onibus e carro. 
+     * @param evt
+     */
+    private void check_caminhaoActionPerformed(java.awt.event.ActionEvent evt) {
 
         if(check_caminhao.isSelected()){
             opsOnibus(false);
@@ -389,9 +422,15 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
             opsCarro(true);
             opsOnibus(true);
         }
-    }//GEN-LAST:event_check_caminhaoActionPerformed
+    }
 
-    private void check_onibusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_onibusActionPerformed
+    
+    /**
+     * Caso a opcao de marcar "onibus" for true, desabilita todos os campos que editaveis
+     * que tenham relacoes com caminhao e carro. 
+     * @param evt
+     */
+    private void check_onibusActionPerformed(java.awt.event.ActionEvent evt) {
         if(check_onibus.isSelected()){
             opsCarro(false);
             opsCaminhao(false);
@@ -401,13 +440,14 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
             opsCarro(true);
             opsCaminhao(true);
         }
-    }//GEN-LAST:event_check_onibusActionPerformed
+    }
 
-    private void txt_placa5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_placa5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_placa5ActionPerformed
-
-    private void btn_salvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvaActionPerformed
+    /**
+     * Evento caso o botao salvar seja preciosado, se o cadastro ocrrer com sucesso,
+     * mostra uma mensagem de sucesso. Caso contrario, mostra uma mensagem de falha.
+     * @param evt
+     */
+    private void btn_salvaActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             Veiculo novoVeiculo = salvaVeiculo();
             veiculos.add(novoVeiculo);
@@ -418,8 +458,7 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "DIGITE AS INFORMACOES DE FORMA CORRETA");
         }
-    }//GEN-LAST:event_btn_salvaActionPerformed
-
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_salva;

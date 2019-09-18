@@ -42,7 +42,7 @@ public class BuscarVeiculo extends javax.swing.JInternalFrame {
         txt_valorDiaria = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txt_info = new javax.swing.JTextArea();
+        infoArea = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         txt_placa = new javax.swing.JTextField();
         Buscar = new javax.swing.JButton();
@@ -133,10 +133,10 @@ public class BuscarVeiculo extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel1.setText("Buscar Veiculo");
 
-        txt_info.setEditable(false);
-        txt_info.setColumns(20);
-        txt_info.setRows(5);
-        jScrollPane1.setViewportView(txt_info);
+        infoArea.setEditable(false);
+        infoArea.setColumns(20);
+        infoArea.setRows(5);
+        jScrollPane1.setViewportView(infoArea);
 
         jLabel2.setText("Placa do Veiculo");
 
@@ -225,7 +225,7 @@ public class BuscarVeiculo extends javax.swing.JInternalFrame {
     private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
 
         try {
-            txt_info.setText(veiculos.getInfo(txt_placa.getText()));
+            infoArea.setText(veiculos.getInfo(txt_placa.getText()));
             btn_editar.setEnabled(true);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Placa não encontrada!");
@@ -254,6 +254,7 @@ public class BuscarVeiculo extends javax.swing.JInternalFrame {
     private javax.swing.JButton btn_editar;
     private javax.swing.JButton btn_salvaCliente;
     private javax.swing.JDialog edit;
+    private javax.swing.JTextArea infoArea;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -262,7 +263,6 @@ public class BuscarVeiculo extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txt_ano;
-    private javax.swing.JTextArea txt_info;
     private javax.swing.JTextField txt_placa;
     private javax.swing.JTextField txt_placa1;
     private javax.swing.JTextField txt_valorDiaria;

@@ -63,11 +63,14 @@ public class Clientes implements IClientes{
      */
     @Override
     public String getInfo() {
-        String dados = "";
+        String dados ="";
         for(Cliente clienteCadastrado: listClientes){
-            dados += clienteCadastrado.toString();
+            dados += clienteCadastrado.toString()+ "\n\n";
         }
-        return dados;  
+        if(dados != ""){
+            return dados;
+        } 
+        return null;
     }
 
     /**
@@ -77,11 +80,14 @@ public class Clientes implements IClientes{
      */
     @Override
     public String getResumoInfo() {
-        String dados = "";
+        String dados ="";
         for(Cliente clienteCadastrado: listClientes){
-            dados += clienteCadastrado.resumoInfo();
+            dados += clienteCadastrado.resumoInfo()+ "\n\n";
         }
-        return dados;
+        if(dados != ""){
+            return dados;
+        } 
+        return null;
     }
 
     /**

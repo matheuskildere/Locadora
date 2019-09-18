@@ -69,9 +69,12 @@ public class Locacoes implements ILocacoes{
     public String getInfo() {
         String dados= "";
         for (Locacao locacaoCapturada : listLocacoes) {
-            dados += locacaoCapturada.toString();
+            dados += locacaoCapturada.toString()+"\n\n";
         }
-        return dados;
+        if(dados != ""){
+            return dados;
+        } 
+        return null;
     }
     
     /**

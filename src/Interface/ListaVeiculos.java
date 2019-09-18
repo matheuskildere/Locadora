@@ -15,11 +15,11 @@ import trabalhopraticoi.Veiculo;
 public class ListaVeiculos extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form ListaVeiculos
+     * Cria um novo form ListaVeiculos
      */
     public ListaVeiculos() {
         initComponents();
-        areaInfo();
+        areaInfo.setText(veiculos.getResumoInfo()); // caso haja veiculos cadastrados, as informacoes dos mesmos irao aparecer na area de informacoes
     }
 
     /**
@@ -71,13 +71,6 @@ public class ListaVeiculos extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void areaInfo(){
-        String dados = "";
-        for (Veiculo listVeiculo : veiculos.listVeiculos) {
-            dados += listVeiculo.resumoInfo()+"\n\n";
-        }
-        areaInfo.setText(dados);
-    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea areaInfo;
     private javax.swing.JLabel jLabel1;

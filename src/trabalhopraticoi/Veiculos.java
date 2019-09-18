@@ -61,10 +61,13 @@ public class Veiculos implements IVeiculos {
      */
     @Override
     public String getInfo() {
+        String dados = "";
         for(Veiculo veiculosCapturados : listVeiculos){
-            String dados = "\nPlaca: "+ veiculosCapturados.getPlaca();
-            return dados;
+            dados += veiculosCapturados.toString()+ "\n\n";
         }
+        if(dados != ""){
+            return dados;
+        } 
         return null;
     }
 
@@ -75,12 +78,13 @@ public class Veiculos implements IVeiculos {
      */
     @Override
     public String getResumoInfo() {
+        String dados = "";
         for(Veiculo veiculosCapturados : listVeiculos){
-            String dados = "\nPlaca: "+ veiculosCapturados.getPlaca();
-            dados += "\nAno: "+ veiculosCapturados.getAno();
-            dados += "\nValor da Diaria: R$"+ veiculosCapturados.getValorDiaria();
-            return dados;
+            dados += veiculosCapturados.resumoInfo() + "\n\n";
         }
+        if(dados != ""){
+            return dados;
+        } 
         return null;
     }
 

@@ -20,7 +20,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
      */
     public ListaClientes() {
         initComponents();
-        areaInfo();
+        areaInfo.setText(clientes.getResumoInfo());
     }
 
     /**
@@ -71,13 +71,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    private void areaInfo(){
-        String dados = "";
-        for (Cliente listClientes : clientes.listClientes) {
-            dados += listClientes.resumoInfo()+"\n\n";
-        }
-        areaInfo.setText(dados);
-    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea areaInfo;

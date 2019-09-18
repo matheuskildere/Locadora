@@ -166,7 +166,7 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
 
         setSize(new java.awt.Dimension(396, 346));
     }// </editor-fold>//GEN-END:initComponents
-    private Cliente salvaCliente(){
+    private void salvaCliente(){
         String cpf = txt_cpf.getText();
         cpf = cpf.replace(".", "");
         cpf = cpf.replace("-", "");
@@ -174,9 +174,8 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
         long CNH = Long.parseLong(txt_cnh.getText());
         long telefone = Long.parseLong(txt_telefone.getText());
         Cliente novoCliente = new Cliente(txt_nome.getText(), CPF, CNH,txt_endereco.getText(),telefone) {};
-        
-        return novoCliente;
-    }
+        clientes.add(novoCliente);
+        }
     
     private void resetaValores(){
         txt_cpf.setText("");
@@ -188,9 +187,8 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
     
     private void btn_salvaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvaClienteActionPerformed
         try {
-            Cliente novoClinte = salvaCliente();
-            clientes.add(novoClinte);
-            
+            salvaCliente();
+          
             JOptionPane.showMessageDialog(null, "CLIENTE CADASTRADO COM SUCESSO");
             
             resetaValores();
