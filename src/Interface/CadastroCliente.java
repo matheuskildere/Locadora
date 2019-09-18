@@ -166,6 +166,10 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
 
         setSize(new java.awt.Dimension(396, 346));
     }// </editor-fold>//GEN-END:initComponents
+    
+    /**
+     * Pega os dados necessarios da interface grafica, e instancia um novo objeto do tipo cliente.
+     */
     private void salvaCliente(){
         String cpf = txt_cpf.getText();
         cpf = cpf.replace(".", "");
@@ -175,8 +179,11 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
         long telefone = Long.parseLong(txt_telefone.getText());
         Cliente novoCliente = new Cliente(txt_nome.getText(), CPF, CNH,txt_endereco.getText(),telefone) {};
         clientes.add(novoCliente);
-        }
+    }
     
+    /**
+     * Reseta todos os campos editaveis da interface grafica.
+     */
     private void resetaValores(){
         txt_cpf.setText("");
         txt_cnh.setText("");
@@ -185,7 +192,12 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
         txt_endereco.setText("");
     }
     
-    private void btn_salvaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvaClienteActionPerformed
+    /**
+     * Dispara um evento ao clicar no bot�o salvar. Este invoca o metodo salvaCliente e apos
+     * retorna uma mensagem de sucesso ou de falha.
+     * @param evt
+     */
+    private void btn_salvaClienteActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             salvaCliente();
           
@@ -195,7 +207,7 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Digite as informações coretamente!");
         }
-    }//GEN-LAST:event_btn_salvaClienteActionPerformed
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

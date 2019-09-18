@@ -226,19 +226,22 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
         setSize(new java.awt.Dimension(472, 346));
     }// </editor-fold>//GEN-END:initComponents
     
+    /**
+     * 
+     */
     private void salvaLocacao(){
         String cpf = txt_cpf.getText();
         cpf = cpf.replace(".", "");
         cpf = cpf.replace("-", "");
         long CPF = Long.parseLong(cpf);
-        int codigo = Integer.parseInt(codLoca.getText());
         float valorDiaria = Float.parseFloat(txt_valorDia.getText());
         Locacao locacao = new Locacao(clientes.get(CPF), txt_dataLoc.getText(), txt_dataDev.getText(), veiculos.get(txt_placa.getText()), check_seguro.isSelected(), valorDiaria);
         locacoes.add(locacao);
-        
-        JOptionPane.showMessageDialog(null,"LOCAÇÃO REALIZADA COM SUCESSO\n");
     }
     
+    /**
+     * Reseta todos os campos editaveis da interface grafica.
+     */
     private void resetaValores(){
         txt_cpf.setText("");
         txt_valorDia.setText("");
@@ -252,6 +255,7 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         try {
            salvaLocacao();
+           JOptionPane.showMessageDialog(null,"LOCAÇÃO REALIZADA COM SUCESSO\n");
            resetaValores();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"Digite as informações corretamente!");

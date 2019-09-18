@@ -20,7 +20,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
      */
     public ListaClientes() {
         initComponents();
-        areaInfo.setText(clientes.getResumoInfo());
+        areaInfo.setText(clientes.getResumoInfo()); // caso haja clientes cadatrados as informacoes dos mesmo irao aparecer na area de informacao
     }
 
     /**
