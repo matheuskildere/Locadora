@@ -376,7 +376,7 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
         return null;
     }
     
-    private void opsCaminhao(boolean valor){
+    protected void opsCaminhao(boolean valor){
         if (valor){
             txt_cargMax.setEnabled(true);
             txt_numEixos.setEnabled(true);
@@ -388,7 +388,7 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
         }
     }
     
-    private void opsOnibus(boolean valor){
+    protected void opsOnibus(boolean valor){
         if(valor){
             check_onibus.setEnabled(true);
             txt_numPass.setEnabled(true);
@@ -404,7 +404,7 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
         }
     }
     
-    private void opsCarro(boolean valor){
+    protected void opsCarro(boolean valor){
         if(valor){
             txt_numPass.setEnabled(true);
             check_carro.setEnabled(true);

@@ -36,7 +36,7 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
         txt_cnh = new javax.swing.JTextField();
         txt_telefone = new javax.swing.JTextField();
         btn_salvaCliente = new javax.swing.JButton();
-        txt_cpf1 = new javax.swing.JFormattedTextField();
+        txt_cpfEdit = new javax.swing.JFormattedTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         txt_nome = new javax.swing.JTextField();
@@ -81,13 +81,13 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
         });
 
         try {
-            txt_cpf1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+            txt_cpfEdit.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txt_cpf1.addActionListener(new java.awt.event.ActionListener() {
+        txt_cpfEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_cpf1ActionPerformed(evt);
+                txt_cpfEditActionPerformed(evt);
             }
         });
 
@@ -131,7 +131,7 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
                     .addGroup(editLayout.createSequentialGroup()
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_cpf1))
+                        .addComponent(txt_cpfEdit))
                     .addGroup(editLayout.createSequentialGroup()
                         .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(editLayout.createSequentialGroup()
@@ -170,7 +170,7 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
                     .addComponent(txt_nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_cpf1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_cpfEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -215,6 +215,7 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
         }
 
         btn_editar.setText("Editar");
+        btn_editar.setEnabled(false);
         btn_editar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_editarActionPerformed(evt);
@@ -265,21 +266,35 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    private void editaCliente(){
-        String cpf = txt_cpf.getText();
+    private long concertaCpf(String cpf){
         cpf = cpf.replace(".", "");
         cpf = cpf.replace("-", "");
         long CPF = Long.parseLong(cpf);
-        Cliente editaCliente = clientes.get(CPF);
+        return CPF;
+    }
+    
+    private void infoInicial(){
+        Cliente editaCliente = clientes.get(concertaCpf(txt_cpf.getText()));
         txt_nome.setText(editaCliente.getNome());
+        txt_cpfEdit.setText(""+editaCliente.getCpf());
+        txt_cnh.setText(""+editaCliente.getCnh());
+        txt_endereco.setText(""+ editaCliente.getEndereco());
+        txt_telefone.setText(""+ editaCliente.getTelefone());
+    }
+    private void editaCliente(){
+        Cliente editaCliente = clientes.get(concertaCpf(txt_cpfEdit.getText()));
+        editaCliente.setCpf(concertaCpf(txt_cpfEdit.getText()));
+        editaCliente.setCnh(Long.parseLong(txt_cnh.getText()));
+        editaCliente.setEndereco(txt_endereco.getText());
+        editaCliente.setTelefone(Long.parseLong(txt_telefone.getText()));
     }
     private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
-        String cpf = txt_cpf.getText();
-        cpf = cpf.replace(".", "");
-        cpf = cpf.replace("-", "");
-        long CPF = Long.parseLong(cpf);
-        txt_info.setText(clientes.getInfo(CPF));
-
+        try {
+            txt_info.setText(clientes.getInfo(concertaCpf(txt_cpf.getText())));
+            btn_editar.setEnabled(true);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Cliente não encontrado!");
+        }
     }//GEN-LAST:event_BuscarActionPerformed
 
     private void txt_cnhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cnhActionPerformed
@@ -292,15 +307,17 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
 
     private void btn_salvaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvaClienteActionPerformed
         try {
-            JOptionPane.showMessageDialog(null, "Cliente Salvo com sucesso");
+            editaCliente();
+            JOptionPane.showMessageDialog(null, "As informaçõpes do cliente foram alteradas com sucesso");
+            edit.setVisible(false);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Digite as informações coretamente!");
         }
     }//GEN-LAST:event_btn_salvaClienteActionPerformed
 
-    private void txt_cpf1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cpf1ActionPerformed
+    private void txt_cpfEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cpfEditActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_cpf1ActionPerformed
+    }//GEN-LAST:event_txt_cpfEditActionPerformed
 
     private void txt_nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nomeActionPerformed
         // TODO add your handling code here:
@@ -316,7 +333,7 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
 
     private void btn_editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editarActionPerformed
         edit.setVisible(true);
-        editaCliente();
+        infoInicial();
     }//GEN-LAST:event_btn_editarActionPerformed
 
 
@@ -336,7 +353,7 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txt_cnh;
     private javax.swing.JFormattedTextField txt_cpf;
-    private javax.swing.JFormattedTextField txt_cpf1;
+    private javax.swing.JFormattedTextField txt_cpfEdit;
     private javax.swing.JTextField txt_endereco;
     private javax.swing.JTextArea txt_info;
     private javax.swing.JTextField txt_nome;

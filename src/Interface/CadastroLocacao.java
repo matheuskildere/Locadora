@@ -97,6 +97,11 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
         jLabel6.setText("Valor:");
 
         txt_valorDia.setEditable(false);
+        txt_valorDia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_valorDiaActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText("Data devolução:");
 
@@ -291,6 +296,10 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Placa Incorreta");
         }
     }//GEN-LAST:event_btn_validarActionPerformed
+
+    private void txt_valorDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_valorDiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_valorDiaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

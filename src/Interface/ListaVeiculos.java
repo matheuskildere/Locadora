@@ -74,7 +74,7 @@ public class ListaVeiculos extends javax.swing.JInternalFrame {
     private void areaInfo(){
         String dados = "";
         for (Veiculo listVeiculo : veiculos.listVeiculos) {
-            dados += veiculos.getResumoInfo()+"\n";
+            dados += listVeiculo.resumoInfo()+"\n";
         }
         areaInfo.setText(dados);
     }

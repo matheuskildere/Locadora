@@ -59,6 +59,31 @@ public class Locacao {
         return veiculoLocado;
     }
 
+    /**
+     * @param seguro the seguro to set
+     */
+    public void setSeguro(boolean seguro) {
+        this.seguro = seguro;
+    }
+
+    /**
+     * @param dataDevolucao the dataDevolucao to set
+     */
+    public void setDataDevolucao(String dataDevolucao) {
+        this.dataDevolucao = dataDevolucao;
+    }
+
+    public boolean getSeguro() {
+        return seguro;
+    }
+
+    /**
+     * @param veiculoLocado the veiculoLocado to set
+     */
+    public void setVeiculoLocado(Veiculo veiculoLocado) {
+        this.veiculoLocado = veiculoLocado;
+    }
+
     @Override
     public String toString() {
         String dados = "";
