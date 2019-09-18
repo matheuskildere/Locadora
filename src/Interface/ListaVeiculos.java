@@ -10,7 +10,7 @@ import trabalhopraticoi.Veiculo;
 
 /**
  *
- * @author mathe
+ * @author Bruno and Matheus
  */
 public class ListaVeiculos extends javax.swing.JInternalFrame {
 
@@ -74,7 +74,7 @@ public class ListaVeiculos extends javax.swing.JInternalFrame {
     private void areaInfo(){
         String dados = "";
         for (Veiculo listVeiculo : veiculos.listVeiculos) {
-            dados += listVeiculo.resumoInfo()+"\n";
+            dados += listVeiculo.resumoInfo()+"\n\n";
         }
         areaInfo.setText(dados);
     }

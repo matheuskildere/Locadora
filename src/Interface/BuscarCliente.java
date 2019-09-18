@@ -12,7 +12,7 @@ import trabalhopraticoi.Clientes;
 
 /**
  *
- * @author mathe
+ * @author Bruno and Matheus
  */
 public class BuscarCliente extends javax.swing.JInternalFrame {
     
@@ -54,24 +54,8 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
         btn_editar = new javax.swing.JButton();
 
         edit.setMinimumSize(new java.awt.Dimension(300, 500));
-        edit.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentHidden(java.awt.event.ComponentEvent evt) {
-                editComponentHidden(evt);
-            }
-        });
-
-        txt_cnh.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_cnhActionPerformed(evt);
-            }
-        });
 
         txt_telefone.setToolTipText("long");
-        txt_telefone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_telefoneActionPerformed(evt);
-            }
-        });
 
         btn_salvaCliente.setText("Salvar");
         btn_salvaCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -85,11 +69,6 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txt_cpfEdit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_cpfEditActionPerformed(evt);
-            }
-        });
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel7.setText("CPF:");
@@ -97,23 +76,11 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel8.setText("CNH:");
 
-        txt_nome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_nomeActionPerformed(evt);
-            }
-        });
-
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel9.setText("Nome:");
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel10.setText("Endereço:");
-
-        txt_endereco.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_enderecoActionPerformed(evt);
-            }
-        });
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel12.setText("Telefone:");
@@ -266,6 +233,7 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
     private long concertaCpf(String cpf){
         cpf = cpf.replace(".", "");
         cpf = cpf.replace("-", "");
@@ -297,14 +265,6 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_BuscarActionPerformed
 
-    private void txt_cnhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cnhActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_cnhActionPerformed
-
-    private void txt_telefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_telefoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_telefoneActionPerformed
-
     private void btn_salvaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvaClienteActionPerformed
         try {
             editaCliente();
@@ -314,22 +274,6 @@ public class BuscarCliente extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Digite as informações coretamente!");
         }
     }//GEN-LAST:event_btn_salvaClienteActionPerformed
-
-    private void txt_cpfEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cpfEditActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_cpfEditActionPerformed
-
-    private void txt_nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_nomeActionPerformed
-
-    private void txt_enderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_enderecoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_enderecoActionPerformed
-
-    private void editComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_editComponentHidden
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editComponentHidden
 
     private void btn_editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editarActionPerformed
         edit.setVisible(true);

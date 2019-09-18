@@ -11,7 +11,7 @@ import trabalhopraticoi.Veiculo;
 
 /**
  *
- * @author mathe
+ * @author Bruno and Matheus
  */
 public class BuscarVeiculo extends javax.swing.JInternalFrame {
 
@@ -34,28 +34,12 @@ public class BuscarVeiculo extends javax.swing.JInternalFrame {
         edit = new javax.swing.JDialog();
         btn_salvaCliente = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        txt_numEixos = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         txt_placa1 = new javax.swing.JTextField();
-        txt_cargMax = new javax.swing.JTextField();
         txt_ano = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         txt_valorDiaria = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        txt_numPort = new javax.swing.JTextField();
-        txt_numPass = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        txt_medKmLt = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        txt_categoria = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        check_ar = new javax.swing.JCheckBox();
-        check_wifi = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txt_info = new javax.swing.JTextArea();
@@ -64,12 +48,7 @@ public class BuscarVeiculo extends javax.swing.JInternalFrame {
         Buscar = new javax.swing.JButton();
         btn_editar = new javax.swing.JButton();
 
-        edit.setMinimumSize(new java.awt.Dimension(300, 500));
-        edit.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentHidden(java.awt.event.ComponentEvent evt) {
-                editComponentHidden(evt);
-            }
-        });
+        edit.setMinimumSize(new java.awt.Dimension(382, 319));
 
         btn_salvaCliente.setText("Salvar");
         btn_salvaCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -81,43 +60,12 @@ public class BuscarVeiculo extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel3.setText("EDITAR VEICULO");
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel15.setText("Wifi:");
-
-        txt_numEixos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_numEixosActionPerformed(evt);
-            }
-        });
-
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel4.setText("Placa:");
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel12.setText("Carga Max.:");
-
         txt_placa1.setEditable(false);
-        txt_placa1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_placa1ActionPerformed(evt);
-            }
-        });
-
-        txt_cargMax.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_cargMaxActionPerformed(evt);
-            }
-        });
 
         txt_ano.setEditable(false);
-        txt_ano.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_anoActionPerformed(evt);
-            }
-        });
-
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel11.setText("Nº de Eixos:");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel5.setText("Ano:");
@@ -125,189 +73,59 @@ public class BuscarVeiculo extends javax.swing.JInternalFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel6.setText("Valor diária:");
 
-        txt_valorDiaria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_valorDiariaActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel7.setText("Nº Portas:");
-
-        txt_numPort.setEditable(false);
-        txt_numPort.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_numPortActionPerformed(evt);
-            }
-        });
-
-        txt_numPass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_numPassActionPerformed(evt);
-            }
-        });
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel8.setText("Nº Passageiros:");
-
-        txt_medKmLt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_medKmLtActionPerformed(evt);
-            }
-        });
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel9.setText("Média Km/L:");
-
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel13.setText("Categoria:");
-
-        txt_categoria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_categoriaActionPerformed(evt);
-            }
-        });
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel10.setText("Arcondicionado:");
-
-        check_ar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_arActionPerformed(evt);
-            }
-        });
-
-        check_wifi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_wifiActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout editLayout = new javax.swing.GroupLayout(edit.getContentPane());
         edit.getContentPane().setLayout(editLayout);
         editLayout.setHorizontalGroup(
             editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editLayout.createSequentialGroup()
-                .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(editLayout.createSequentialGroup()
-                        .addGap(188, 188, 188)
-                        .addComponent(jLabel3))
-                    .addGroup(editLayout.createSequentialGroup()
-                        .addGap(242, 242, 242)
-                        .addComponent(btn_salvaCliente)))
-                .addContainerGap(207, Short.MAX_VALUE))
+                .addGap(112, 112, 112)
+                .addComponent(jLabel3)
+                .addContainerGap(115, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_salvaCliente)
+                .addGap(156, 156, 156))
             .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(editLayout.createSequentialGroup()
                     .addGap(24, 24, 24)
-                    .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(editLayout.createSequentialGroup()
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_placa1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(editLayout.createSequentialGroup()
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_ano))
-                            .addGroup(editLayout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_valorDiaria)))
+                    .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(editLayout.createSequentialGroup()
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txt_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txt_placa1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(editLayout.createSequentialGroup()
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(7, 7, 7)
-                            .addComponent(txt_numEixos, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txt_cargMax, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(43, 43, 43)
-                    .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(editLayout.createSequentialGroup()
-                                .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txt_numPort)
-                                    .addComponent(txt_numPass)))
-                            .addGroup(editLayout.createSequentialGroup()
-                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(28, 28, 28)
-                                .addComponent(txt_medKmLt, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txt_ano, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
                         .addGroup(editLayout.createSequentialGroup()
-                            .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(editLayout.createSequentialGroup()
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(check_wifi))
-                                .addGroup(editLayout.createSequentialGroup()
-                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(27, 27, 27)
-                                    .addComponent(check_ar)))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(24, 24, 24)))
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txt_valorDiaria)))
+                    .addContainerGap(52, Short.MAX_VALUE)))
         );
         editLayout.setVerticalGroup(
             editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
+                .addGap(40, 40, 40)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 261, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
                 .addComponent(btn_salvaCliente)
                 .addGap(25, 25, 25))
             .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(editLayout.createSequentialGroup()
                     .addGap(124, 124, 124)
-                    .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(editLayout.createSequentialGroup()
-                            .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel4)
-                                .addComponent(txt_placa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel5)
-                                .addComponent(txt_ano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel6)
-                                .addComponent(txt_valorDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel13)
-                                .addComponent(txt_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(36, 36, 36))
-                        .addGroup(editLayout.createSequentialGroup()
-                            .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel7)
-                                .addComponent(txt_numPort, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel8)
-                                .addComponent(txt_numPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel9)
-                                .addComponent(txt_medKmLt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(check_ar))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(check_wifi)
-                                .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jLabel12)
-                                    .addComponent(txt_cargMax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txt_numEixos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jLabel15))))
-                    .addContainerGap(88, Short.MAX_VALUE)))
+                    .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel4)
+                        .addComponent(txt_placa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel5)
+                        .addComponent(txt_ano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel6)
+                        .addComponent(txt_valorDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addContainerGap(99, Short.MAX_VALUE)))
         );
 
         setClosable(true);
@@ -390,12 +208,12 @@ public class BuscarVeiculo extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     private void editaVeiculo(){
-        Veiculo veiculoEdita = veiculos.get(txt_placa.getText());
-        
-    }
-    private void opsCarro(){
         Veiculo editaVeiculo = veiculos.get(txt_placa.getText());
-        txt_placa.setText(editaVeiculo.getPlaca());
+        editaVeiculo.setValorDiaria(Float.parseFloat(txt_valorDiaria.getText()));
+    }
+    private void infoCarro(){
+        Veiculo editaVeiculo = veiculos.get(txt_placa.getText());
+        txt_placa1.setText(editaVeiculo.getPlaca());
         txt_ano.setText(""+editaVeiculo.getAno());
         txt_valorDiaria.setText(""+editaVeiculo.getValorDiaria());
     }
@@ -414,99 +232,37 @@ public class BuscarVeiculo extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_BuscarActionPerformed
 
-    private void editComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_editComponentHidden
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editComponentHidden
-
     private void btn_editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editarActionPerformed
         edit.setVisible(true);
-        editaVeiculo();
+        infoCarro();
         
     }//GEN-LAST:event_btn_editarActionPerformed
 
     private void btn_salvaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvaClienteActionPerformed
         try {
-            JOptionPane.showMessageDialog(null, "Cliente Salvo com sucesso");
+            editaVeiculo();
+            JOptionPane.showMessageDialog(null, "Veiculo Salvo com sucesso");
+            edit.setVisible(false);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Digite as informações coretamente!");
         }
     }//GEN-LAST:event_btn_salvaClienteActionPerformed
-
-    private void txt_numEixosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_numEixosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_numEixosActionPerformed
-
-    private void txt_placa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_placa1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_placa1ActionPerformed
-
-    private void txt_cargMaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cargMaxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_cargMaxActionPerformed
-
-    private void txt_anoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_anoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_anoActionPerformed
-
-    private void txt_valorDiariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_valorDiariaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_valorDiariaActionPerformed
-
-    private void txt_numPortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_numPortActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_numPortActionPerformed
-
-    private void txt_numPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_numPassActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_numPassActionPerformed
-
-    private void txt_medKmLtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_medKmLtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_medKmLtActionPerformed
-
-    private void txt_categoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_categoriaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_categoriaActionPerformed
-
-    private void check_arActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_arActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_check_arActionPerformed
-
-    private void check_wifiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_wifiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_check_wifiActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Buscar;
     private javax.swing.JButton btn_editar;
     private javax.swing.JButton btn_salvaCliente;
-    private javax.swing.JCheckBox check_ar;
-    private javax.swing.JCheckBox check_wifi;
     private javax.swing.JDialog edit;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txt_ano;
-    private javax.swing.JTextField txt_cargMax;
-    private javax.swing.JTextField txt_categoria;
     private javax.swing.JTextArea txt_info;
-    private javax.swing.JTextField txt_medKmLt;
-    private javax.swing.JTextField txt_numEixos;
-    private javax.swing.JTextField txt_numPass;
-    private javax.swing.JTextField txt_numPort;
     private javax.swing.JTextField txt_placa;
     private javax.swing.JTextField txt_placa1;
     private javax.swing.JTextField txt_valorDiaria;

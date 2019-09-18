@@ -13,7 +13,7 @@ import trabalhopraticoi.Locacoes;
 
 /**
  *
- * @author Bruno
+ * @author Bruno and Matheus
  */
 public class BuscarLocacao extends javax.swing.JInternalFrame {
     Locacao editaLoca;
@@ -74,18 +74,7 @@ public class BuscarLocacao extends javax.swing.JInternalFrame {
 
         jLabel4.setText("Placa Veículo:");
 
-        txt_placa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_placaActionPerformed(evt);
-            }
-        });
-
         txt_valorDia.setEditable(false);
-        txt_valorDia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_valorDiaActionPerformed(evt);
-            }
-        });
 
         jLabel6.setText("Valor:");
 
@@ -94,12 +83,6 @@ public class BuscarLocacao extends javax.swing.JInternalFrame {
         btn_validar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_validarActionPerformed(evt);
-            }
-        });
-
-        check_seguro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_seguroActionPerformed(evt);
             }
         });
 
@@ -162,7 +145,6 @@ public class BuscarLocacao extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(check_seguro)
                         .addGap(9, 9, 9)))
-                .addGap(18, 18, 18)
                 .addComponent(btn_salvaLocacao)
                 .addGap(21, 21, 21))
         );
@@ -178,12 +160,6 @@ public class BuscarLocacao extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(txt_info);
 
         jLabel2.setText("Cod. Locação");
-
-        txt_cod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_codActionPerformed(evt);
-            }
-        });
 
         Buscar.setText("Buscar");
         Buscar.addActionListener(new java.awt.event.ActionListener() {
@@ -259,10 +235,6 @@ public class BuscarLocacao extends javax.swing.JInternalFrame {
         txt_dataDev.setText(""+editaLoca.getDataDevolucao());
         check_seguro.setSelected(editaLoca.getSeguro());
     }
-    private void txt_codActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_codActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_codActionPerformed
-
     private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
         try {
             txt_info.setText(locacoes.getInfo(Integer.parseInt(txt_cod.getText())));
@@ -271,14 +243,6 @@ public class BuscarLocacao extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Código Inválido");
         }
     }//GEN-LAST:event_BuscarActionPerformed
-
-    private void txt_placaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_placaActionPerformed
-
-    }//GEN-LAST:event_txt_placaActionPerformed
-
-    private void txt_valorDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_valorDiaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_valorDiaActionPerformed
 
     private void btn_validarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_validarActionPerformed
         try {
@@ -289,10 +253,6 @@ public class BuscarLocacao extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Placa Incorreta");
         }
     }//GEN-LAST:event_btn_validarActionPerformed
-
-    private void check_seguroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_seguroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_check_seguroActionPerformed
 
     private void btn_salvaLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvaLocacaoActionPerformed
         try {

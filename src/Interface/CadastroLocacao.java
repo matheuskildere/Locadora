@@ -17,7 +17,7 @@ import trabalhopraticoi.Veiculos;
 
 /**
  *
- * @author Bruno
+ * @author Bruno and Matheus
  */
 public class CadastroLocacao extends javax.swing.JInternalFrame {
     protected static Locacoes locacoes = new Locacoes(); 
@@ -75,12 +75,6 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
 
         jLabel3.setText("Placa Veículo:");
 
-        txt_placa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_placaActionPerformed(evt);
-            }
-        });
-
         btn_salvar.setText("Salvar");
         btn_salvar.setEnabled(false);
         btn_salvar.addActionListener(new java.awt.event.ActionListener() {
@@ -97,11 +91,6 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
         jLabel6.setText("Valor:");
 
         txt_valorDia.setEditable(false);
-        txt_valorDia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_valorDiaActionPerformed(evt);
-            }
-        });
 
         jLabel7.setText("Data devolução:");
 
@@ -123,12 +112,6 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-
-        check_seguro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_seguroActionPerformed(evt);
             }
         });
 
@@ -253,7 +236,7 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
         Locacao locacao = new Locacao(clientes.get(CPF), txt_dataLoc.getText(), txt_dataDev.getText(), veiculos.get(txt_placa.getText()), check_seguro.isSelected(), valorDiaria);
         locacoes.add(locacao);
         
-        JOptionPane.showMessageDialog(null,"LOCAÇÃO REALIZADO COM SUCESSO\n");
+        JOptionPane.showMessageDialog(null,"LOCAÇÃO REALIZADA COM SUCESSO\n");
     }
     
     private void resetaValores(){
@@ -265,10 +248,6 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
         check_seguro.setSelected(false);
         codLoca.setText(""+Locacao.numCodigo);
     }
-    private void txt_placaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_placaActionPerformed
-        
-    }//GEN-LAST:event_txt_placaActionPerformed
-
     private void btn_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvarActionPerformed
         // TODO add your handling code here:
         try {
@@ -283,10 +262,6 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
        codLoca.setText(""+Locacao.numCodigo);
     }//GEN-LAST:event_codLocaAncestorAdded
 
-    private void check_seguroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_seguroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_check_seguroActionPerformed
-
     private void btn_validarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_validarActionPerformed
         try {
             String valorDiaria =""+ veiculos.get(txt_placa.getText()).getValorDiaria();
@@ -296,10 +271,6 @@ public class CadastroLocacao extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Placa Incorreta");
         }
     }//GEN-LAST:event_btn_validarActionPerformed
-
-    private void txt_valorDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_valorDiaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_valorDiaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

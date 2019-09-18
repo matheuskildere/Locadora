@@ -8,55 +8,86 @@ package trabalhopraticoi;
 import java.util.ArrayList;
 
 /**
- * Veiculo
+ * Classe abstrata que representa Veiculo
  * @author Bruno and Matheus
- */
-
-/**
- A locadora trabalha com o aluguel de veículos, onde cada veículo tem, no mínimo, os
-seguintes dados: placa, ano e valor da diária. Carro, ônibus e caminhão são tipos de veículos
-que atualmente podem ser locados. Além dos atributos comuns de todos os veículos, cada
-tipo possui um conjunto extra de dados
  */
 public abstract class Veiculo {
     protected String placa;
     protected int ano;
     protected float valorDiaria;
 
+    /**
+     * Construtor da Classe Veiculo.
+     * @param placa
+     * @param ano
+     * @param valorDiaria 
+     */
     public Veiculo(String placa, int ano, float valorDiaria){
         this.placa = placa;
         this.ano = ano;
         this.valorDiaria = valorDiaria;
     }
 
+    /**
+    * Método getPlaca, retorna a placa do Veiculo.
+    * @return placa
+    */
     public String getPlaca() {
         return placa;
     }
 
-    public void setPlaca(String placa) {
-        this.placa = placa;
-    }
-
+    /**
+    * Método getAno retorna o ano do Veiculo.
+    * @return ano 
+    */
     public int getAno() {
         return ano;
     }
 
-    public void setAno(int ano) {
-        this.ano = ano;
-    }
-
+    /**
+     * Método getValorDiaria retorna o valor da diaria de um Veiculo.
+     * @return valorDiaria 
+     */
     public float getValorDiaria() {
         return valorDiaria;
     }
 
+    /**
+     * Método setPlaca modifica a placa de um Veiculo.
+     * @param placa 
+     */
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    /**
+     * Método setAno modifica o ano de um Veiculo.
+     * @param ano 
+     */
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+    /**
+     * Método setValorDiaria modifica o valor da diaria de um Veiculo.
+     * @param valorDiaria 
+     */
     public void setValorDiaria(float valorDiaria) {
         this.valorDiaria = valorDiaria;
     }
     
-     public String resumoInfo() {
+    /**
+     * Método resumoInfo retorna o resumo dos dados de um Veiculo.
+     * @return String com resumo das informacoes 
+     */
+    public String resumoInfo() {
        return "Placa: " + getPlaca() + "\nAno: " + getAno() + "\nValor Diaria: " + getValorDiaria(); 
     }
 
+    /**
+    * Método toString retorna os dados do Veiculo.
+    * @return String com os dados do veiculo. 
+    */
     @Override
     public String toString(){
         return "Placa: " + getPlaca() + "\nAno: "+ getAno() +"\nValor: " +getValorDiaria();

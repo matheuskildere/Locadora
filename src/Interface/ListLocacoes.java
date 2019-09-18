@@ -10,7 +10,7 @@ import trabalhopraticoi.Locacao;
 
 /**
  *
- * @author mathe
+ * @author Bruno and Matheus
  */
 public class ListLocacoes extends javax.swing.JInternalFrame {
 
@@ -73,7 +73,7 @@ public class ListLocacoes extends javax.swing.JInternalFrame {
     private void areaInfo(){
         String dados = "";
         for (Locacao listLocacao : locacoes.listLocacoes) {
-            dados += listLocacao.toString()+"\n";
+            dados += listLocacao.toString()+"\n\n";
         }
         areaInfo.setText(dados);
     }

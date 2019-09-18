@@ -11,7 +11,7 @@ import trabalhopraticoi.Clientes;
 
 /**
  *
- * @author mathe
+ * @author Bruno and Matheus
  */
 public class ListaClientes extends javax.swing.JInternalFrame {
 
@@ -74,7 +74,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
     private void areaInfo(){
         String dados = "";
         for (Cliente listClientes : clientes.listClientes) {
-            dados += listClientes.resumoInfo()+"\n";
+            dados += listClientes.resumoInfo()+"\n\n";
         }
         areaInfo.setText(dados);
     }

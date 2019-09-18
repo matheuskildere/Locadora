@@ -4,7 +4,7 @@ import trabalhopraticoi.Cliente;
 import trabalhopraticoi.Veiculo;
 
 /**
- * Locacao
+ * Classe representa a Locação.
  */
 public class Locacao {
     public static int numCodigo = 1;
@@ -17,6 +17,15 @@ public class Locacao {
     private boolean seguro;
     private float valorDiaria;
     
+    /**
+     * Construtor da Classe Locação, é responsável por criar o objeto em memória.
+     * @param locador
+     * @param dataLocacao
+     * @param dataDevolucao
+     * @param veiculoLocado
+     * @param seguro
+     * @param valorDiaria 
+     */
     public Locacao (Cliente locador, String dataLocacao, String dataDevolucao ,Veiculo veiculoLocado, boolean seguro, float valorDiaria){
         this.codigo = numCodigo;
         this.locador = locador;
@@ -29,35 +38,53 @@ public class Locacao {
     }
 
     /**
-     * @return the codigo
+     * Método de acesso ao Codigo da Locação.
+     * @return codigo
      */
     public int getCodigo() {
         return codigo;
     }
+
     /**
-     * @return the dataDevolucao
+     * Método de acesso a Data da devolução do Veiculo.
+     * @return dataDevolucao
      */
     public String getDataDevolucao() {
         return dataDevolucao;
     }
+
     /**
-     * @return the dataLocacao
+     * Método de acesso a data da locação do veiculo.
+     * @return dataLocacao
      */
     public String getDataLocacao() {
         return dataLocacao;
     }
+
     /**
-     * @return the locador
+     * Método de acesso ao cliente responsável pela locação.
+     * @return locador
      */
     public Cliente getLocador() {
         return locador;
     }
+
     /**
+     * Método de acesso ao veículo da locação.
      * @return the veiculoLocado
      */
     public Veiculo getVeiculoLocado() {
         return veiculoLocado;
     }
+
+    /**
+     * Método de acesso a informação sobre o seguro do veiculo.
+     * @return seguro
+     */    
+    public boolean getSeguro() {
+        return seguro;
+    }
+
 
     /**
      * @param seguro the seguro to set
@@ -67,27 +94,29 @@ public class Locacao {
     }
 
     /**
-     * @param dataDevolucao the dataDevolucao to set
+     * Método modificador da data de devolução do veiculo.
+     * @param dataDevolucao 
      */
     public void setDataDevolucao(String dataDevolucao) {
         this.dataDevolucao = dataDevolucao;
     }
 
-    public boolean getSeguro() {
-        return seguro;
-    }
-
     /**
-     * @param veiculoLocado the veiculoLocado to set
+     * Método modificador do veiculo de uma locação.
+     * @param veiculoLocado 
      */
     public void setVeiculoLocado(Veiculo veiculoLocado) {
         this.veiculoLocado = veiculoLocado;
     }
 
+    /**
+     * Método toString retorna os dados de uma locação.
+     * @return dados
+     */
     @Override
     public String toString() {
         String dados = "";
-        dados += "Codigo: "+getCodigo () +"\nData locacao: "+getDataLocacao() +"\nData devolucao: "+getDataDevolucao();
+        dados += "Codigo: "+getCodigo () +"\nData locacao: "+getDataLocacao() +"\nData devolucao: "+getDataDevolucao() + "\nSeguro: " + getSeguro();
         dados += " \n" +locador.resumoInfo();
         dados += " \n" + veiculoLocado.resumoInfo();
         return dados;

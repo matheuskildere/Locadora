@@ -2,6 +2,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Menu",
+            "request": "launch",
+            "mainClass": "Interface.Menu"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TrabalhoPraticoI",
+            "request": "launch",
+            "mainClass": "Principal.TrabalhoPraticoI"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - locadoraInterface",
             "request": "launch",
             "mainClass": "Interface.locadoraInterface",

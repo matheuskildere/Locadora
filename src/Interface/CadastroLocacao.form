@@ -190,9 +190,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_placa">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_placaActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn_salvar">
       <Properties>
@@ -225,9 +222,6 @@
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_valorDiaActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
@@ -261,9 +255,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JCheckBox" name="check_seguro">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_seguroActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JFormattedTextField" name="txt_dataLoc">
       <Properties>

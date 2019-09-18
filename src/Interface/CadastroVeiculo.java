@@ -14,7 +14,7 @@ import trabalhopraticoi.Veiculos;
 
 /**
  *
- * @author mathe
+ * @author Bruno and Matheus
  */
 public class CadastroVeiculo extends javax.swing.JInternalFrame {
     protected static Veiculos veiculos = new Veiculos();
@@ -35,63 +35,45 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        labelPlaca = new javax.swing.JLabel();
         txt_placa = new javax.swing.JTextField();
         txt_ano = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        labelAno = new javax.swing.JLabel();
+        labelValor = new javax.swing.JLabel();
         txt_valorDiaria = new javax.swing.JTextField();
         check_carro = new javax.swing.JCheckBox();
         check_caminhao = new javax.swing.JCheckBox();
         check_onibus = new javax.swing.JCheckBox();
-        jLabel5 = new javax.swing.JLabel();
+        labelPor = new javax.swing.JLabel();
         txt_numPort = new javax.swing.JTextField();
         txt_numPass = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        labelPassa = new javax.swing.JLabel();
         txt_medKmLt = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        labelMedia = new javax.swing.JLabel();
+        labelCategoria = new javax.swing.JLabel();
         txt_categoria = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        labelAr = new javax.swing.JLabel();
         check_ar = new javax.swing.JCheckBox();
         check_wifi = new javax.swing.JCheckBox();
-        jLabel15 = new javax.swing.JLabel();
+        labelWifi = new javax.swing.JLabel();
         txt_numEixos = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
+        labelCarga = new javax.swing.JLabel();
         txt_cargMax = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
+        labelEixos = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         btn_salva = new javax.swing.JButton();
 
         setClosable(true);
         setPreferredSize(new java.awt.Dimension(396, 346));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel1.setText("Placa:");
+        labelPlaca.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        labelPlaca.setText("Placa:");
 
-        txt_placa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_placaActionPerformed(evt);
-            }
-        });
+        labelAno.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        labelAno.setText("Ano:");
 
-        txt_ano.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_anoActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel2.setText("Ano:");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel4.setText("Valor diária:");
-
-        txt_valorDiaria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_valorDiariaActionPerformed(evt);
-            }
-        });
+        labelValor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        labelValor.setText("Valor diária:");
 
         check_carro.setText("Carro");
         check_carro.addActionListener(new java.awt.event.ActionListener() {
@@ -114,77 +96,29 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel5.setText("Nº Portas:");
+        labelPor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        labelPor.setText("Nº Portas:");
 
-        txt_numPort.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_numPortActionPerformed(evt);
-            }
-        });
+        labelPassa.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        labelPassa.setText("Nº Passageiros:");
 
-        txt_numPass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_numPassActionPerformed(evt);
-            }
-        });
+        labelMedia.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        labelMedia.setText("Média Km/L:");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel8.setText("Nº Passageiros:");
+        labelCategoria.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        labelCategoria.setText("Categoria:");
 
-        txt_medKmLt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_medKmLtActionPerformed(evt);
-            }
-        });
+        labelAr.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        labelAr.setText("Arcondicionado:");
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel9.setText("Média Km/L:");
+        labelWifi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        labelWifi.setText("Wifi:");
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel13.setText("Categoria:");
+        labelCarga.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        labelCarga.setText("Carga Max.:");
 
-        txt_categoria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_categoriaActionPerformed(evt);
-            }
-        });
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel10.setText("Arcondicionado:");
-
-        check_ar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_arActionPerformed(evt);
-            }
-        });
-
-        check_wifi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_wifiActionPerformed(evt);
-            }
-        });
-
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel15.setText("Wifi:");
-
-        txt_numEixos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_numEixosActionPerformed(evt);
-            }
-        });
-
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel12.setText("Carga Max.:");
-
-        txt_cargMax.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_cargMaxActionPerformed(evt);
-            }
-        });
-
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel11.setText("Nº de Eixos:");
+        labelEixos.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        labelEixos.setText("Nº de Eixos:");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -195,27 +129,27 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(txt_placa, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelAno, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(txt_ano))
                         .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelValor, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(txt_valorDiaria)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelEixos, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(7, 7, 7)
                         .addComponent(txt_numEixos, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelCarga, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_cargMax, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(43, 43, 43)
@@ -224,25 +158,25 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(labelPassa, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelPor, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txt_numPort)
                                     .addComponent(txt_numPass)))
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(labelMedia, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(28, 28, 28)
                                 .addComponent(txt_medKmLt, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(144, 144, 144))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(labelWifi, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(check_wifi))
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(labelAr, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(27, 27, 27)
                                 .addComponent(check_ar)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -267,46 +201,46 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
+                            .addComponent(labelPlaca)
                             .addComponent(txt_placa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
+                            .addComponent(labelAno)
                             .addComponent(txt_ano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
+                            .addComponent(labelValor)
                             .addComponent(txt_valorDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel13)
+                            .addComponent(labelCategoria)
                             .addComponent(txt_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(36, 36, 36))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
+                            .addComponent(labelPor)
                             .addComponent(txt_numPort, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
+                            .addComponent(labelPassa)
                             .addComponent(txt_numPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9)
+                            .addComponent(labelMedia)
                             .addComponent(txt_medKmLt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(labelAr, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(check_ar))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(check_wifi)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel11)
-                                .addComponent(jLabel12)
+                                .addComponent(labelEixos)
+                                .addComponent(labelCarga)
                                 .addComponent(txt_cargMax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txt_numEixos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel15))))
+                            .addComponent(labelWifi))))
                 .addContainerGap())
         );
 
@@ -434,14 +368,6 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
         check_wifi.setSelected(false);
     }
     
-    private void txt_anoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_anoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_anoActionPerformed
-
-    private void txt_valorDiariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_valorDiariaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_valorDiariaActionPerformed
-
     private void check_carroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_carroActionPerformed
         if(check_carro.isSelected()){
             opsOnibus(false);
@@ -477,58 +403,22 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_check_onibusActionPerformed
 
-    private void txt_numPortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_numPortActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_numPortActionPerformed
-
-    private void txt_numPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_numPassActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_numPassActionPerformed
-
-    private void txt_medKmLtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_medKmLtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_medKmLtActionPerformed
-
     private void txt_placa5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_placa5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_placa5ActionPerformed
-
-    private void txt_cargMaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cargMaxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_cargMaxActionPerformed
-
-    private void txt_categoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_categoriaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_categoriaActionPerformed
-
-    private void check_arActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_arActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_check_arActionPerformed
-
-    private void check_wifiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_wifiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_check_wifiActionPerformed
-
-    private void txt_numEixosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_numEixosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_numEixosActionPerformed
 
     private void btn_salvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvaActionPerformed
         try {
             Veiculo novoVeiculo = salvaVeiculo();
             veiculos.add(novoVeiculo);
             
-            JOptionPane.showMessageDialog(null, veiculos.getInfo(novoVeiculo.getPlaca()));
+            JOptionPane.showMessageDialog(null, "VEICULO CADASTRADO COM SUCESSO");
             
             resetaValores();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "DIGITE AS INFORMACOES DE FORMA CORRETA");
         }
     }//GEN-LAST:event_btn_salvaActionPerformed
-
-    private void txt_placaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_placaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_placaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -538,19 +428,19 @@ public class CadastroVeiculo extends javax.swing.JInternalFrame {
     private javax.swing.JCheckBox check_carro;
     private javax.swing.JCheckBox check_onibus;
     private javax.swing.JCheckBox check_wifi;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel labelAno;
+    private javax.swing.JLabel labelAr;
+    private javax.swing.JLabel labelCarga;
+    private javax.swing.JLabel labelCategoria;
+    private javax.swing.JLabel labelEixos;
+    private javax.swing.JLabel labelMedia;
+    private javax.swing.JLabel labelPassa;
+    private javax.swing.JLabel labelPlaca;
+    private javax.swing.JLabel labelPor;
+    private javax.swing.JLabel labelValor;
+    private javax.swing.JLabel labelWifi;
     private javax.swing.JTextField txt_ano;
     private javax.swing.JTextField txt_cargMax;
     private javax.swing.JTextField txt_categoria;

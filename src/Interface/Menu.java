@@ -6,8 +6,8 @@
 package Interface;
 
 /**
- *
- * @author mathe
+ * Interface Grafica menu
+ * @author Bruno and Matheus
  */
 public class Menu extends javax.swing.JFrame {
     
@@ -35,13 +35,13 @@ public class Menu extends javax.swing.JFrame {
         menuBuscaLocacao = new javax.swing.JMenuItem();
         menuListLocacoes = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        menu_novoCliente = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        menuNovoCliente = new javax.swing.JMenuItem();
+        menuBuscarCliente = new javax.swing.JMenuItem();
         menuListClientes = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         menuNovoVeiculo = new javax.swing.JMenuItem();
         menuBuscarVeiculo = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
+        menuListaVeiculos = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(javax.swing.UIManager.getDefaults().getColor("Button.darcula.selection.color2"));
@@ -111,21 +111,21 @@ public class Menu extends javax.swing.JFrame {
         jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icon_user.png"))); // NOI18N
         jMenu3.setText("Gerenciar Clientes");
 
-        menu_novoCliente.setText("Novo Cliente");
-        menu_novoCliente.addActionListener(new java.awt.event.ActionListener() {
+        menuNovoCliente.setText("Novo Cliente");
+        menuNovoCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menu_novoClienteActionPerformed(evt);
+                menuNovoClienteActionPerformed(evt);
             }
         });
-        jMenu3.add(menu_novoCliente);
+        jMenu3.add(menuNovoCliente);
 
-        jMenuItem4.setText("Buscar Cliente");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        menuBuscarCliente.setText("Buscar Cliente");
+        menuBuscarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                menuBuscarClienteActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem4);
+        jMenu3.add(menuBuscarCliente);
 
         menuListClientes.setText("Lista de Clientes");
         menuListClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -157,13 +157,13 @@ public class Menu extends javax.swing.JFrame {
         });
         jMenu4.add(menuBuscarVeiculo);
 
-        jMenuItem9.setText("Lista de Veículos");
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+        menuListaVeiculos.setText("Lista de Veículos");
+        menuListaVeiculos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
+                menuListaVeiculosActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem9);
+        jMenu4.add(menuListaVeiculos);
 
         jMenuBar1.add(jMenu4);
 
@@ -189,94 +189,96 @@ public class Menu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void menuNovaLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNovaLocacaoActionPerformed
-        CadastroLocacao novaLocacao = new CadastroLocacao();
-        JArea.add(novaLocacao);
-        novaLocacao.setVisible(true);
-    }//GEN-LAST:event_menuNovaLocacaoActionPerformed
-
-    private void menuBuscarVeiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBuscarVeiculoActionPerformed
+    /**
+     * Acao do sistema ao clicar na opcao "Busca Veiculo" no menu de veiculos.
+     * @param evt
+     */
+    private void menuBuscarVeiculoActionPerformed(java.awt.event.ActionEvent evt) {
         BuscarVeiculo buscarVeiculo = new BuscarVeiculo();
         JArea.add(buscarVeiculo);
         buscarVeiculo.setVisible(true);
-    }//GEN-LAST:event_menuBuscarVeiculoActionPerformed
-
-    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        ListaVeiculos listaVeiculo = new ListaVeiculos();
-        JArea.add(listaVeiculo);
-        listaVeiculo.setVisible(true);
-    }//GEN-LAST:event_jMenuItem9ActionPerformed
-
-    private void menu_novoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_novoClienteActionPerformed
-        CadastroCliente novoCliente = new CadastroCliente();
-        JArea.add(novoCliente);
-        novoCliente.setVisible(true);
-    }//GEN-LAST:event_menu_novoClienteActionPerformed
-
-    private void menuNovoVeiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNovoVeiculoActionPerformed
+    }
+    
+    /**
+     * Acao do sistema ao clicar na opcao "Novo Veiculo" no menu de veiculos.
+     * @param evt
+     */
+    private void menuNovoVeiculoActionPerformed(java.awt.event.ActionEvent evt) {
         CadastroVeiculo novoVeiculo = new CadastroVeiculo();
         JArea.add(novoVeiculo);
         novoVeiculo.setVisible(true);
-    }//GEN-LAST:event_menuNovoVeiculoActionPerformed
+    }
 
-    private void menuBuscaLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBuscaLocacaoActionPerformed
-        BuscarLocacao buscarLocacao = new BuscarLocacao();
-        JArea.add(buscarLocacao);
-        buscarLocacao.setVisible(true);
-    }//GEN-LAST:event_menuBuscaLocacaoActionPerformed
+    /**
+     * Acao do sistema ao clicar na opcao "Lista de Veiculos" no menu de locacoes.
+     * @param evt
+     */
+    private void menuListaVeiculosActionPerformed(java.awt.event.ActionEvent evt) {
+        ListaVeiculos listaVeiculo = new ListaVeiculos();
+        JArea.add(listaVeiculo);
+        listaVeiculo.setVisible(true);
+    }
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    /**
+     * Acao do sistema ao clicar na opcao "Buscar Cliente" no menu de clientes.
+     * @param evt
+     */
+    private void menuBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {
         BuscarCliente novaBusca = new BuscarCliente();
         JArea.add(novaBusca);
         novaBusca.setVisible(true);
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }
 
-    private void menuListLocacoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuListLocacoesActionPerformed
+    /**
+     * Acao do sistema ao clicar na opcao "Novo Cliente" no menu de clientes.
+     * @param evt
+     */
+    private void menuNovoClienteActionPerformed(java.awt.event.ActionEvent evt) {
+        CadastroCliente novoCliente = new CadastroCliente();
+        JArea.add(novoCliente);
+        novoCliente.setVisible(true);
+    }
+    
+    /**
+     * Acao do sistema ao clicar na opcao "nova locacao" no menu de locacoes.
+     * @param evt
+     */
+    private void menuNovaLocacaoActionPerformed(java.awt.event.ActionEvent evt) {
+        CadastroLocacao novaLocacao = new CadastroLocacao();
+        JArea.add(novaLocacao);
+        novaLocacao.setVisible(true);
+    }
+
+    /**
+     * Acao do sistema ao clicar na opcao "Buscar Locacao" no menu de locacoes.
+     * @param evt
+     */
+    private void menuBuscaLocacaoActionPerformed(java.awt.event.ActionEvent evt) {
+        BuscarLocacao buscarLocacao = new BuscarLocacao();
+        JArea.add(buscarLocacao);
+        buscarLocacao.setVisible(true);
+    }
+
+    /**
+     * Acao do sistema ao clicar na opcao "Lista de Locacoes" no menu de locacoes.
+     * @param evt
+     */
+    private void menuListLocacoesActionPerformed(java.awt.event.ActionEvent evt) {
         ListLocacoes listaLocacoes = new ListLocacoes();
         JArea.add(listaLocacoes);
         listaLocacoes.setVisible(true);
-    }//GEN-LAST:event_menuListLocacoesActionPerformed
+    }
 
-    private void menuListClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuListClientesActionPerformed
+    /**
+     * Acao do sistema ao clicar na opcao "Buscar Locacao" no menu de locacoes.
+     * @param evt
+     */
+    private void menuListClientesActionPerformed(java.awt.event.ActionEvent evt) {
         ListaClientes listaClientes = new ListaClientes();
         JArea.add(listaClientes);
         listaClientes.setVisible(true);
-    }//GEN-LAST:event_menuListClientesActionPerformed
-
-    /**
-     * @param args the comma|nd line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Menu().setVisible(true);
-            }
-        });
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane JArea;
@@ -285,14 +287,14 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JMenuItem menuBuscaLocacao;
+    private javax.swing.JMenuItem menuBuscarCliente;
     private javax.swing.JMenuItem menuBuscarVeiculo;
     private javax.swing.JMenuItem menuListClientes;
     private javax.swing.JMenuItem menuListLocacoes;
+    private javax.swing.JMenuItem menuListaVeiculos;
     private javax.swing.JMenuItem menuNovaLocacao;
+    private javax.swing.JMenuItem menuNovoCliente;
     private javax.swing.JMenuItem menuNovoVeiculo;
-    private javax.swing.JMenuItem menu_novoCliente;
     // End of variables declaration//GEN-END:variables
 }

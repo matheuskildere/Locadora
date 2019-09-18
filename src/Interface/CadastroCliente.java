@@ -11,7 +11,7 @@ import trabalhopraticoi.Clientes;
 
 /**
  *
- * @author mathe
+ * @author Bruno and matheus
  */
 public class CadastroCliente extends javax.swing.JInternalFrame {
     protected static Clientes clientes = new Clientes();
@@ -53,39 +53,16 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel8.setText("CNH:");
 
-        txt_nome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_nomeActionPerformed(evt);
-            }
-        });
-
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel9.setText("Nome:");
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel10.setText("Endereço:");
 
-        txt_endereco.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_enderecoActionPerformed(evt);
-            }
-        });
-
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel12.setText("Telefone:");
 
-        txt_cnh.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_cnhActionPerformed(evt);
-            }
-        });
-
         txt_telefone.setToolTipText("long");
-        txt_telefone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_telefoneActionPerformed(evt);
-            }
-        });
 
         btn_salvaCliente.setText("Salvar");
         btn_salvaCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -99,11 +76,6 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txt_cpf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_cpfActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -214,38 +186,18 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
         txt_endereco.setText("");
     }
     
-    private void txt_telefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_telefoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_telefoneActionPerformed
-
-    private void txt_cnhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cnhActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_cnhActionPerformed
-
-    private void txt_enderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_enderecoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_enderecoActionPerformed
-
-    private void txt_nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_nomeActionPerformed
-
     private void btn_salvaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvaClienteActionPerformed
         try {
             Cliente novoClinte = salvaCliente();
             clientes.add(novoClinte);
             
-            JOptionPane.showMessageDialog(null, clientes.getInfo(novoClinte.getCpf()));
+            JOptionPane.showMessageDialog(null, "CLIENTE CADASTRADO COM SUCESSO");
             
             resetaValores();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Digite as informações coretamente!");
         }
     }//GEN-LAST:event_btn_salvaClienteActionPerformed
-
-    private void txt_cpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cpfActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_cpfActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

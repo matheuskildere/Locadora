@@ -17,7 +17,7 @@ public class Caminhao extends Veiculo{
     private float cargMax;
 
     /**
-     * Método Construtor da classe Caminhão.
+     * Metodo Construtor da classe Caminhao.
      * @param placa
      * @param ano
      * @param valorDiaria
@@ -31,28 +31,28 @@ public class Caminhao extends Veiculo{
     }
 
     /**
-     * Método que retorna o número de eixos do caminhão.
+     * Metodo que retorna o numero de eixos do caminhao.
      * @return the numEixo
      */
     public int getNumEixo() {
         return numEixo;
     }
     /**
-     * Método que retorna a carga máxima suportada pelo caminhão.
+     * Metodo que retorna a carga maxima suportada pelo caminhao.
      * @return the cargMax
      */
     public float getCargMax() {
         return cargMax;
     }
     /**
-     * Método modificador da carga máxima do caminhão.
+     * Metodo modificador da carga maxima do caminhao.
      * @param cargMax the cargMax to set
      */
     public void setCargMax(float cargMax) {
         this.cargMax = cargMax;
     }
     /**
-     * Método modificador do número de eixos do caminhão.
+     * Metodo modificador do numero de eixos do caminhao.
      * @param numEixo the numEixo to set
      */
     public void setNumEixo(int numEixo) {
@@ -61,7 +61,7 @@ public class Caminhao extends Veiculo{
 
     /**
      * 
-     * Método toString que serve para retornar o número de eixos e a carga máxima de um caaminhão
+     * Metodo toString que serve para retornar o numero de eixos e a carga maxima de um caminhao
      */
     @Override
     public String toString() {
